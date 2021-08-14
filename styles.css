@@ -1,6 +1,6 @@
 body {
-  --bg-color: rgb(21, 32, 43);
-  --text-color: white;
+  --bg-color: white;
+  --text-color: rgb(21, 32, 43);
   background: var(--bg-color);
   color: var(--text-color);
   transition: color 0.75s;
@@ -15,6 +15,10 @@ body .container {
 }
 body header {
   width: 100%;
+  text-align: center;
+}
+body .intro {
+  text-align: justify;
 }
 body .sm-links {
   margin: 5% 0;
@@ -27,20 +31,6 @@ body .sm-links a {
   margin: 0 2%;
   text-decoration: none;
   border-bottom: 1px solid;
-}
-body #mode-switch {
-  position: absolute;
-  background: transparent;
-  border: none;
-  color: var(--text-color);
-  outline: none;
-  cursor: pointer;
-  transition: color 0.75s;
-  text-decoration: underline;
-  text-underline-position: under;
-  top: 5%;
-  right: 20%;
-  font-size: 1rem;
 }
 
 @media (min-width: 990px) {
@@ -67,10 +57,6 @@ body #mode-switch {
   body .sm-links a {
     font-size: 1.5rem;
   }
-
-  body #mode-switch {
-    font-size: 1.5rem;
-  }
 }
 
 @media (max-width: 992px) {
@@ -88,12 +74,6 @@ body #mode-switch {
     font-size: 1rem;
   }
   body .sm-links a {
-    font-size: 0.8rem;
-  }
-
-  body #mode-switch {
-    top: 2%;
-    right: 5%;
     font-size: 0.8rem;
   }
 }
@@ -115,12 +95,6 @@ body #mode-switch {
   body .sm-links a {
     font-size: 0.8rem;
   }
-
-  body #mode-switch {
-    top: 2%;
-    right: 5%;
-    font-size: 0.8rem;
-  }
 }
 
 @media (max-width: 250px) {
@@ -140,10 +114,11 @@ body #mode-switch {
   body .sm-links a {
     font-size: 0.6rem;
   }
+}
 
-  body #mode-switch {
-    top: 2%;
-    right: 5%;
-    font-size: 0.6rem;
+@media (prefers-color-scheme: dark) {
+  body {
+    --bg-color: rgb(21, 32, 43);
+    --text-color: white;
   }
 }
