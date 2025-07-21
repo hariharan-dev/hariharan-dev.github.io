@@ -5,11 +5,11 @@ body {
   color: var(--text-color);
   transition: color 0.75s;
   font-family: Josefin Sans, sans-serif;
+  overflow: auto;
 }
 body .container {
   margin: auto;
   display: flex;
-  height: 98vh;
   justify-content: center;
   flex-direction: column;
 }
@@ -32,30 +32,43 @@ body .sm-links a {
   text-decoration: none;
   border-bottom: 1px solid;
 }
+body .twitter-link {
+  color: var(--text-color);
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
 
-@media (min-width: 990px) {
+@media (min-width: 992px) {
   .container {
-    width: 900px;
+    width: 60%;
     font-size: 18px;
   }
 
   .intro {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     line-height: 2.5rem;
   }
 
   header {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   body .sm-links a {
-    font-size: 0.8rem;
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 1200px) {
-  body .sm-links a {
+  header {
+    font-size: 1.25rem;
+  }
+
+  .intro {
     font-size: 1.5rem;
+  }
+
+  body .sm-links a {
+    font-size: 1.25rem;
   }
 }
 
@@ -71,14 +84,14 @@ body .sm-links a {
   }
 
   header {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   body .sm-links a {
-    font-size: 0.8rem;
+    font-size: 1.25rem;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .container {
     font-size: 10px;
     width: 90%;
@@ -94,25 +107,6 @@ body .sm-links a {
   }
   body .sm-links a {
     font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 250px) {
-  .container {
-    font-size: 8px;
-    width: 90%;
-  }
-
-  .intro {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
-  header {
-    font-size: 0.5rem;
-  }
-  body .sm-links a {
-    font-size: 0.6rem;
   }
 }
 
